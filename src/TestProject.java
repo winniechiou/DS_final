@@ -65,7 +65,7 @@ public class TestProject extends HttpServlet {
 				running_end = false;
 				System.out.println("in thread");
 				keywords = new ArrayList();
-				keywords.add(new Keyword("lyrics", 50));
+				keywords.add(new Keyword("lyrics", 500));
 				keywords.add(new Keyword("song", 5));
 				keywords.add(new Keyword("composer", 3));
 				keywords.add(new Keyword("album", 4));
