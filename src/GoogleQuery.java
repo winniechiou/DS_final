@@ -98,7 +98,7 @@ public class GoogleQuery
 		// System.out.println(doc.text());
 		Elements lis = doc.select("div");
 		lis = lis.select(".ZINbbc");
-		System.out.println(lis.size());
+		//System.out.println(lis.size());
 		
 		
 		for(Element li : lis)
@@ -112,9 +112,9 @@ public class GoogleQuery
 				int sa = url.indexOf("&sa");
 				url = url.substring(http, sa);
 				//lrcbox
-				if (url.indexOf("youtube.com")==-1 && url.indexOf(".pdf")==-1 && url.indexOf(".doc")==-1 && url.indexOf(".txt")==-1 && url.indexOf("weibo")==-1 && url.indexOf("apple.com")==-1&&url.indexOf("wikipedia")==-1&&url.indexOf("facebook")==-1&&url.indexOf("books.google")==-1&&url.indexOf("twitter")==-1) {
+				if (url.indexOf("youtube.com")==-1 && url.indexOf(".pdf")==-1 && url.indexOf(".doc")==-1 && url.indexOf(".txt")==-1 && url.indexOf("weibo")==-1 && url.indexOf("apple.com")==-1 && url.indexOf("wikipedia")==-1 && url.indexOf("facebook")==-1 && url.indexOf("books.google")==-1 && url.indexOf("twitter")==-1 && url.indexOf("reddit.com")==-1 && url.indexOf(".aspx")==-1 && url.indexOf("novel")==-1 && url.indexOf("pinterest")==-1) {
 					ListForResultsUrl.add(url);
-					System.out.println("url added");
+				//	System.out.println("url added");
 				//	System.out.println(url);
 				}
 				
@@ -122,7 +122,7 @@ public class GoogleQuery
 			//	if (title.indexOf("YouTube")==-1 && url.indexOf("PDF")==-1 && url.indexOf("pdf")==-1 && url.indexOf("DOC")==-1 && url.indexOf("doc")==-1 && url.indexOf("txt")==-1) {
 					if (ListForTitles.size()==ListForResultsUrl.size()-1) {
 						ListForTitles.add(title);
-						System.out.println("title added");
+				//		System.out.println("title added");
 				//		System.out.println(title);
 					}
 			//	}
@@ -145,7 +145,7 @@ public class GoogleQuery
 //				System.out.println(title+" "+citeUrl);
 				if (ListForTitles.size() == (retVal.size()+1) && ListForResultsUrl.size() == (retVal.size()+1)) {
 					retVal.put(title, url);
-					System.out.println("retval add");
+					//System.out.println("retval add");
 				}
 				
 
@@ -160,13 +160,13 @@ public class GoogleQuery
 			
 
 		}
-		/**
+		
 		for (int a = 0; a<ListForResultsUrl.size(); a++) {
 			System.out.println(ListForTitles.get(a));
-			System.out.println(ListForResultsUrl.get(a));
+		//	System.out.println(ListForResultsUrl.get(a));
 		}
 		System.out.println(retVal.size());
-		*/
+		
 		return retVal;
 
 	}
@@ -203,7 +203,7 @@ public class GoogleQuery
 				int chn =a.indexOf("<");
 				String chinese =a.substring(0,chn);
 				//System.out.println(chinese);
-				list=list+chinese+"  ,";
+				list=list+chinese+"  ,";	
 				//chineselist.add(chinese);
 				newcontent =a.substring(chn);
 				

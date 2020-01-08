@@ -60,8 +60,7 @@ public class TestProject extends HttpServlet {
 			response.setHeader("refresh", "3;url=http://localhost:8080/final/TestProject?run="+1);
 			
 			if(request.getParameter("keyword")!=null) {
-				String keyword = request.getParameter("keyword").replaceAll(" ","+");
-				System.out.println(keyword);
+				String keyword = request.getParameter("keyword");
 				running_end = false;
 				System.out.println("in thread");
 				keywords = new ArrayList();
@@ -81,7 +80,7 @@ public class TestProject extends HttpServlet {
 				keywords.add(new Keyword("App Store", -100000));
 				keywords.add(new Keyword("AppStore", -100000));
 				keywords.add(new Keyword("wikipedia", -1000));
-				keywords.add(new Keyword("facebook", -5000));
+				keywords.add(new Keyword("facebook", -2000));
 				keywords.add(new Keyword("維基", -1000));
 				keywords.add(new Keyword("歌詞", 5));
 				keywords.add(new Keyword("歌曲", 5));
@@ -95,12 +94,14 @@ public class TestProject extends HttpServlet {
 				
 				
 				String teString = keyword;
-				keywords.add(new Keyword(teString, 1000));
+				keywords.add(new Keyword(teString, 2000));
 				String[] userInput = teString.split(" ");
 				String input = "";
 				for (String userinput:userInput) {
 					input += userinput + "+";
 				}
+				System.out.println(keyword);
+				System.out.println(input);
 				GoogleQuery google = new GoogleQuery(input + "lyrics+genius+OR+魔鏡");
 				HashMap<String, String> query;
 				
@@ -160,6 +161,7 @@ public class TestProject extends HttpServlet {
 					Collections.reverse(ListForSearchResults);
 					System.out.println("query.size"+query.size());
 					System.out.println("ListForSearchResults.size"+ListForSearchResults.size());
+					System.out.println();
 					for (int x = 0; x<ListForSearchResults.size(); x++) {
 						System.out.print(ListForSearchResults.get(x).nodeScore + "\t");
 						System.out.println(ListForSearchResults.get(x).webPage.name);
@@ -197,7 +199,7 @@ public class TestProject extends HttpServlet {
 	
 	public static void sort(){
 		quickSort(0, ListForSearchResults.size()-1);
-		System.out.println("Done");
+		System.out.println("Sorting is done");
 	}
 	
 	
@@ -237,3 +239,4 @@ public class TestProject extends HttpServlet {
 //	
 
 }
+
