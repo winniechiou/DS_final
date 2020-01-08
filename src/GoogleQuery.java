@@ -112,7 +112,7 @@ public class GoogleQuery
 				int sa = url.indexOf("&sa");
 				url = url.substring(http, sa);
 				//lrcbox
-				if (url.indexOf("youtube.com")==-1 && url.indexOf(".pdf")==-1 && url.indexOf(".doc")==-1 && url.indexOf(".txt")==-1 && url.indexOf("weibo")==-1 && url.indexOf("apple.com")==-1 && url.indexOf("wikipedia")==-1 && url.indexOf("facebook")==-1 && url.indexOf("books.google")==-1 && url.indexOf("twitter")==-1 && url.indexOf("reddit.com")==-1 && url.indexOf(".aspx")==-1 && url.indexOf("novel")==-1 && url.indexOf("pinterest")==-1) {
+				if (url.indexOf("youtube.com")==-1 && url.indexOf(".pdf")==-1 && url.indexOf(".doc")==-1 && url.indexOf(".txt")==-1 && url.indexOf("weibo")==-1 && url.indexOf("apple.com")==-1 && url.indexOf("wikipedia")==-1 && url.indexOf("facebook")==-1 && url.indexOf("books.google")==-1 && url.indexOf("twitter")==-1 && url.indexOf("reddit.com")==-1 && url.indexOf(".aspx")==-1 && url.indexOf("novel")==-1 && url.indexOf("pinterest")==-1&& url.indexOf("hashtag")==-1) {
 					ListForResultsUrl.add(url);
 				//	System.out.println("url added");
 				//	System.out.println(url);
