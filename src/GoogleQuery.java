@@ -219,3 +219,4 @@ public class GoogleQuery
 		//return "你可能有興趣 ："+list;
 	}
 }
+
