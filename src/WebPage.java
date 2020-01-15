@@ -19,5 +19,4 @@ public class WebPage {
 			score += counter.countKeyword(k.name)* k.weight;	
 		}
 	}
-	
 }
